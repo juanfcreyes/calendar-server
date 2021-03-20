@@ -81,6 +81,7 @@ export const renew = async (req: express.Request, res = express.response) => {
     res.json({
         ok: true,
         msg: 'renew',
-        token
+        token,
+        user: {uid, name}
     });
 };
