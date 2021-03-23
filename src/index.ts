@@ -6,10 +6,6 @@ import events from './routes/events';
 import { dbConnection } from './database/config';
 
 dotenv.config();
-/**
- * db user: mern_user
- * db password: EZyrBhG8bDCqA82P
- */
 
 /**
  * Crear servidor express;
@@ -21,13 +17,11 @@ const app = express();
  */
 dbConnection();
 
-app.use(cors());
-
 
 /**
- * Directorio public
+ * Cors
  */
-app.use(express.static('public'));
+app.use(cors());
 
 /**
  * Lectura y parseo json
@@ -39,6 +33,12 @@ app.use(express.json());
  */
 app.use('/api/auth', auth);
 app.use('/api/events', events);
+
+/**
+ * Directorio public
+ */
+ app.use('/', express.static(__dirname + '/public'));
+
 
 /**
  * Configurando servidor
