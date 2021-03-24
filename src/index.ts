@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import auth from './routes/auth';
 import events from './routes/events';
 import { dbConnection } from './database/config';
-import fs from 'fs';
 
 dotenv.config();
 
@@ -46,21 +45,4 @@ console.log('__dirname', __dirname);
  */
 app.listen(process.env.PORT, () => {
     console.log(`Server runs on port: ${process.env.PORT}`);
-});
-
-
-fs.readdir(__dirname + '/public', function (err, files) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log(files);
-});
-
-fs.readdir(__dirname, function (err, files) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log(files);
 });
