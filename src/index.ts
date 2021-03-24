@@ -49,7 +49,7 @@ app.listen(process.env.PORT, () => {
 });
 
 
-fs.readdir(__dirname + '/public/css', function (err, files) {
+fs.readdir(__dirname + '/public', function (err, files) {
     if (err) {
       console.log(err);
       return;
