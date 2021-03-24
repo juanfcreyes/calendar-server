@@ -37,9 +37,7 @@ app.use('/api/events', events);
 /**
  * Directorio public
  */
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/public/static'));
-
+app.use('/app', express.static(__dirname + '/public'));
 
 /**
  * Configurando servidor
