@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "copyfiles -u 1 src/public/** dist/ && concurrently  \"tsc -w\"  \"nodemon dist/\"",
-    "start": "copyfiles -u src/public/** dist/ && copyfiles -u src/public/**/** dist/  &&  tsc && node dist/index.js"
+    "start": "copyfiles -u 1 src/public/** dist/ && copyfiles -u 1 src/public/**/** dist/  &&  tsc && node dist/index.js"
   },
   "keywords": [],
   "author": "",

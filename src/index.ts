@@ -56,3 +56,11 @@ fs.readdir(__dirname + '/public', function (err, files) {
     }
     console.log(files);
 });
+
+fs.readdir(__dirname, function (err, files) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(files);
+});
